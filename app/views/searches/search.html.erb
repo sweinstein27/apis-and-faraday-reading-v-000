@@ -5,5 +5,15 @@
   <%= submit_tag "Search!" %>
 <% end %>
 <div>
-  <%= @venues %>
+  <% if @venues %>
+    <ul>
+    <% @venues.each do |venue| %>
+      <li>
+        <%= venue["name"] %><br>
+        <%= venue["location"]["address"] %><br>
+        Checkins: <%= venue["stats"]["checkinsCount"] %>
+      </li>
+    <% end %>
+    </ul>
+  <% end %>
 </div>
