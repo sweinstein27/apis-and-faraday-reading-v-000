@@ -21,4 +21,3 @@ class SearchesController < ApplicationController
     render 'search'
   end
 end
- 
